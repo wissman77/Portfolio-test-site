@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+Wissman Portfilio - About page
+{% endblock %}
+
+
+{% block content %}
+<section class="about">
+    <div class="img-holder">
+        <img src="{{ url_for('static', filename='images/FB_IMG_1577261129049.jpg') }}"  alt="Wissman pic"/>
+        <p>Was Invented at 1977 on a very strange times &#128540;</p>
+        <p>Passion to learn new thing every time &#128526;</p>
+        <p>Never give up. and continue till you reach the end &#128537;</p>
+    </div>
+    <div class="about-content">
+        <h2>Resume</h2>
+        <br>
+        <h3>Education</h3>
+        <ul>
+            <li><strong>1997 - 2001</strong>: Registered Nurse at Tel Aviv University</li>
+            <li><strong>2004 - 2005</strong>: Intensive Care Unit Treatment Course</li>
+            <li><strong>2007 - 2008</strong>: Microsoft Professional Certified Developer - C# 2.0 - ASP.NET</li>
+        </ul>
+        <br>
+        <h3>Work</h3>
+        <ul>
+            <li><strong>2001 - 2012</strong>: Registered Nurse at Asutta Medical Centers</li>
+            <li><strong>2007 - 2007</strong>: Web Developer at HandCraft.com</li>
+            <li><strong>2011 - now</strong>: Registered Nurse at PACU Beilinson </li>
+            <li><strong>2015: </strong>Programming GYM Managnment System </li>
+            <li><strong>2019: </strong>Programming of Barbershop Managment System</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
