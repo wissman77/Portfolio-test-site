@@ -37,7 +37,7 @@ def contact(is_ok=0):
         if not name or not email or not message:
             return redirect(url_for('contact'))
 
-        if not os.path.exists('/messages'):
+        if not os.path.exists('messages'):
             os.mkdir('messages')
 
         with open(f"messages/{datetime.datetime.now().timestamp()}.txt", "w") as file:
