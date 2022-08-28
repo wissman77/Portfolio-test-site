@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, request, flash, redirect
 import datetime
+import os
 
 app = Flask(__name__)
 app.secret_key = 'Very_Strong_Secret_Key_12321122111'
@@ -35,6 +36,9 @@ def contact(is_ok=0):
 
         if not name or not email or not message:
             return redirect(url_for('contact'))
+
+        if not os.path.exists('/messages'):
+            os.mkdir('messages')
 
         with open(f"messages/{datetime.datetime.now().timestamp()}.txt", "w") as file:
             file.write(f"Name: {name}\n")
